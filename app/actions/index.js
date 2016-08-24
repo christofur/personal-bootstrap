@@ -1,5 +1,5 @@
-export const fetchData = () => {
+export const fetchRandomData = () => {
     return {
-        type: 'FETCH_DATA',
+        type: 'FETCH_RANDOM_DATA',
     }
 };

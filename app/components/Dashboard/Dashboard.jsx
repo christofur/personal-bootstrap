@@ -1,25 +1,33 @@
+
 import React from 'react';
-import pubsub from 'pubsub-js';
 
 import DashboardRun from './Dashboard.run';
 
 class Dashboard extends React.Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     componentWillMount() {
-        pubsub.publish('setPageTitle', this.constructor.name);
+
     }
 
     componentDidMount() {
         DashboardRun();
+        this.props.onTick();
     }
 
     render() {
+
         return (
             <section>
-                <h1>Hello, World</h1>
+                <span>{ this.props.data.join(',') }</span>
             </section>
         );
     }
+
+
 }
 
 export default Dashboard;
