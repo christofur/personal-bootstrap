@@ -136,6 +136,14 @@ footer {
     max-width: $screen-xs-min;
 }
 
+.container-fixed {
+    max-width: $screen-sm-min;
+    word-wrap: break-word;
+    font-family: $fixed-font-family;
+    position:fixed;
+    font-size: $text-md;
+}
+
 // remove extra spaces on mobile
 @media #{$max-desktop} {
     .container-unwrap {

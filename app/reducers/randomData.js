@@ -3,7 +3,7 @@ const randomData = (state = null, action) => {
     switch (action.type) {
         case 'FETCH_RANDOM_DATA': {
 
-            let data = [], totalPoints = 10;
+            let data = [], totalPoints = 1000;
             data = state ? state[0] : getRandomData();
 
             let realTimeData = getRandomData();

@@ -18,12 +18,38 @@ class Dashboard extends React.Component {
         this.props.onTick();
     }
 
+    createCharacter(e, i){
+
+        return <span style={this.generateStyle(i)}>{e}</span>
+    }
+
+    generateStyle(i){
+
+        i = 1000 - i;
+        return {
+            color: `hsla(${i}, ${i / 20}%, ${i / 10}%, 1)`
+        }
+    }
+
+    generateTweak(){
+        return {
+            marginTop: '20px'
+        }
+    }
+
     render() {
 
         return (
-            <section>
-                <span>{ this.props.data.join(',') }</span>
-            </section>
+            <div>
+                <section className="container-fixed">
+                    { this.props.data.map((e, i) => this.createCharacter(e, i))}
+                </section>
+                <section className="container-fixed" style={this.generateTweak()}>
+                    { this.props.data.map((e, i) => this.createCharacter(e, i))}
+                </section>
+            </div>
+
+
         );
     }
 

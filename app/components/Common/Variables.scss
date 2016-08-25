@@ -40,6 +40,7 @@ $link-hover-color:      darken($link-color, 15%);
 //== Typography
 
 $font-family:           "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fixed-font-family:     monospace;
 $font-size-base:        14px;
 
 //== Layout
@@ -66,6 +67,8 @@ $footer-hg:                     60px;
 
 //== Media queries breakpoints
 
+// Extra small screen / phone
+$screen-xxs-min:             240px;
 // Extra small screen / phone
 $screen-xs-min:              480px;
 // Small screen / tablet
