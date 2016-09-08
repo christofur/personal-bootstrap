@@ -24,7 +24,7 @@ const browserHistory = useRouterHistory(createHistory)({ basename: '/' })
 ReactDOM.render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={Core}>
+            <Route path="*" component={Core}>
 
                 {/* Default route*/}
                 <IndexRoute component={AlgoDashboard} />
